@@ -1,0 +1,166 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Title Section */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1d2671;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #444;
+}
+
+/* Inputs and Textareas */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1d2671;
+  box-shadow: 0 0 5px rgba(29, 38, 113, 0.3);
+}
+
+textarea {
+  resize: none;
+}
+
+/* File Inputs */
+input[type="file"] {
+  font-size: 0.9rem;
+  background: #f9f9f9;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="file"]:focus {
+  border-color: #c33764;
+  box-shadow: 0 0 5px rgba(195, 55, 100, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn,
+.submit-btn {
+  background: #1d2671;
+  color: #ffffff;
+}
+
+.add-btn:hover,
+.submit-btn:hover {
+  background: #151c52;
+  transform: translateY(-3px);
+}
+
+.remove-btn {
+  background: #c33764;
+  color: #ffffff;
+}
+
+.remove-btn:hover {
+  background: #991d46;
+  transform: translateY(-3px);
+}
+
+/* Submit Button Specific */
+.submit-btn {
+  align-self: center;
+  padding: 12px 20px;
+  font-size: 1rem;
+  width: 50%;
+  text-align: center;
+}
+
+/* Section Titles */
+h3 {
+  font-size: 1.4rem;
+  color: #1d2671;
+  margin-bottom: 10px;
+  border-left: 4px solid #c33764;
+  padding-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .submit-btn {
+    width: 100%; /* Full-width for small screens */
+  }
+}
